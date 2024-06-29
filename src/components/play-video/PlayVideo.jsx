@@ -15,6 +15,7 @@ const PlayVideo = ({ videoId }) => {
   const [more, setMore] = useState(false);
   const [channelData , setChannelData]=useState(null);
   const [commentData ,setCommentData]=useState([])
+  const [showComment , setShowComment]=useState(false)
 
   const fetscVideodata = async () => {
     // fetching video data
@@ -113,12 +114,12 @@ const PlayVideo = ({ videoId }) => {
           </span>
         </p>
         <hr />
-        <h4>{apiData?viewsConverter(apiData.statistics.commentCount):"123"} comments</h4>
+        <h4 onClick={()=>setShowComment(!showComment)}>{apiData?viewsConverter(apiData.statistics.commentCount):"123"} comments</h4>
 
 
       {
         commentData.map((item , i )=>(
-          <div key={i} className="comments">
+          <div key={i} className={`comments ${!showComment? 'hideC':""}`} >
           <img src={item.snippet.topLevelComment.snippet.authorProfileImageUrl} alt="" />
           <div>
             <h3>

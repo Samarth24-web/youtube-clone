@@ -7,7 +7,6 @@ const Recomended = ({catagoryId}) => {
   const [apiData , setApiData]=useState([]);
 
   const fetchData=async()=>{
-    console.log(catagoryId)
 
     const url=` https://youtube.googleapis.com/youtube/v3/videos?part=snippet%2CcontentDetails%2Cstatistics&chart=mostPopular&maxResults=100&regionCode=IN&videoCategoryId=${catagoryId}&key=${API_KEY}`
 
@@ -17,8 +16,6 @@ const Recomended = ({catagoryId}) => {
   useEffect(()=>{
     fetchData();
   },[catagoryId])
-
-  console.log(apiData)
 
 
   return (

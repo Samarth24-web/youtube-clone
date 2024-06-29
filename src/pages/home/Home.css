@@ -3,7 +3,16 @@
   padding: 20px 0;
   padding-left: 17%;
   padding-right: 1%;
+  height: 100vh;
+  
+  overflow:scroll;
 }
 .large-container{
   padding-left: 7%;
+}
+
+@media(max-width:65em){
+  .container{
+    padding-left: 10%;
+  }
 }

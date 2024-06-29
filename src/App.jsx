@@ -6,7 +6,7 @@ import Video from './pages/video/Video'
 import './App.css'
 
 function App() {
-  const [sidebar , setSidebar]=useState(true);
+  const [sidebar , setSidebar]=useState(false);
   return (
     <>
     <NavBar setSidebar={setSidebar}></NavBar>

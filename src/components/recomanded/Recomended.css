@@ -4,7 +4,7 @@
 .side-video-list{
   display: flex;
   justify-content: space-between;
-  margin-bottom: 8px;
+  margin-bottom: .8rem;
 }
 
 .side-video-list img{
@@ -17,9 +17,23 @@
 }
 
 .vid-info h4{
-  font-size: 14px;
-  margin-bottom: 5px;
+  font-size: 1.4rem;
+  margin-bottom: .5rem;
 }
 .vid-info p{
-  font-size: 12px;
+  font-size: 1.2rem;
 }
+
+@media(max-width:40em){
+  .vid-info h4{
+    font-size: 2rem;
+    margin-bottom: 1rem;
+  }
+  .vid-info p{
+    font-size: 1.6rem;
+  }
+  .recomanded{
+    width: 90%;
+    margin: 0 5%;
+  }
+  }
